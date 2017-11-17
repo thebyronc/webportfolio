@@ -12,7 +12,7 @@ This web document is initially designed for the week 1 Epicodus course project. 
 No installation required beyond cloning the repository and viewing the source documents.
 
 ## Known Bugs
-This will be updated when bug are found
++When page is compressed, the horizontal nav links will stack and cover of the main title banner.
 
 
 ## Support and contact details
@@ -20,6 +20,9 @@ Email Byron Chang at thebyronc@gmail.com
 
 ## Technologies Used
 Currently only pure html and css.
+
+## GitHubn Pages
+https://thebyronc.github.io/webportfolio/
 
 ### License
 No license for this. Free to use.
