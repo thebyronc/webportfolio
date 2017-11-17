@@ -19,8 +19,7 @@ This will be updated when bug are found
 Email Byron Chang at thebyronc@gmail.com
 
 ## Technologies Used
-
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+Currently only pure html and css.
 
 ### License
 No license for this. Free to use.
