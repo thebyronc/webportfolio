@@ -22,6 +22,13 @@ h2 {
   padding-top: 70px;
   font-size: 50px;
 }
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0px;
+  border-radius: 0px;
+}
 .navbar-default {
   background: #000;
   border: none;
@@ -38,18 +45,11 @@ h2 {
   background: #000;
   color: #757AD1;
 }
-.navbar {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  top: 0px;
-  border-radius: 0px;
-}
 .contentbox {
   padding: 50px 15px;
 }
 .contentbox img {
-  margin: 50px 15px;
+  margin: 54px 15px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -74,4 +74,10 @@ h2 {
 #wiki h2 {
   color: #03A5A5;
   border-bottom: 1px solid #03A5A5;
+  text-align: right;
+}
+#favband h2 {
+  color: #F23545;
+  border-bottom: 1px solid #F23545;
+  text-align: right;
 }
