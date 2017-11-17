@@ -19,9 +19,11 @@ h2 {
 }
 .header h1 {
   margin: 50px;
+  padding-top: 70px;
+  font-size: 50px;
 }
 .navbar-default {
-  background: none;
+  background: #000;
   border: none;
 }
 .nav {
@@ -30,16 +32,27 @@ h2 {
 .nav li a {
   padding: 16px 15px;
   color: #ffffff;
+  background-color: #000;
 }
 .nav li a:hover {
-  background: none;
+  background: #000;
   color: #757AD1;
+}
+.navbar {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  top: 0px;
+  border-radius: 0px;
 }
 .contentbox {
   padding: 50px 15px;
 }
 .contentbox img {
   margin: 50px 15px;
+  max-width: 100%;
+  height: auto;
+  display: block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .contentbox:nth-child(even) {
@@ -51,5 +64,14 @@ h2 {
 }
 #aboutbyron h2 {
   color: #F5A503;
+  border-bottom: 1px solid #F5A503;
   text-align: right;
+}
+#github h2 {
+  color: #757AD1;
+  border-bottom: 1px solid #757AD1;
+}
+#wiki h2 {
+  color: #03A5A5;
+  border-bottom: 1px solid #03A5A5;
 }
