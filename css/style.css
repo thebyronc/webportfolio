@@ -51,6 +51,7 @@ h2 {
 .contentbox img {
   margin: 54px 15px;
   max-width: 100%;
+  max-height: 250px;
   height: auto;
   display: block;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -83,6 +84,7 @@ h2 {
 #workhistory h2{
   color: #000;
   border-bottom: 1px solid #000;
+  text-align: left;
 }
 .goducks span:nth-child(odd) {
   color: #FADF12; 154733;
@@ -90,9 +92,14 @@ h2 {
 .goducks span:nth-child(even) {
   color: #154733;
 }
-#contact h2{
-  color: #000;
-  border-bottom: 1px solid #000;
+#contact img {
+    margin: 0px 15px 0px 0px;
+    max-width: 100%;
+    max-height: 250px;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
 }
 .footer {
   width: 100%;
