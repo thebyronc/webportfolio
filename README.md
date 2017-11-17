@@ -21,7 +21,7 @@ Email Byron Chang at thebyronc@gmail.com
 ## Technologies Used
 Currently only pure html and css.
 
-## GitHubn Pages
+## GitHub Pages
 https://thebyronc.github.io/webportfolio/
 
 ### License
