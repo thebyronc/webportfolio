@@ -3,7 +3,7 @@ body {
 }
 h2 {
   font-weight: bolder;
-  color: #F5A503;
+  border-bottom: 1px solid #ccc;
 }
 .wrapper {
   width: 100%;
@@ -35,19 +35,21 @@ h2 {
   background: none;
   color: #757AD1;
 }
-.container{
-  text-align: left;
-  margin: 30px 15px;
-  padding: 0;
+.contentbox {
+  padding: 50px 15px;
 }
-.about {
-
+.contentbox img {
+  margin: 50px 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.about img {
-  max-width: 250px;
-  float: left;
-  margin: 0 15px;
+.contentbox:nth-child(even) {
+  background-color: #fff;
 }
-.about h2 p {
-
+.row {
+  width: 100%;
+  margin: 0;
+}
+#aboutbyron h2 {
+  color: #F5A503;
+  text-align: right;
 }
