@@ -19,7 +19,7 @@ No installation required beyond cloning the repository and viewing the source do
 Email Byron Chang at thebyronc@gmail.com
 
 ## Technologies Used
-Currently only pure html and css.
+Used GitHub, Atom, and Paint.net.
 
 ## GitHub Pages
 https://thebyronc.github.io/webportfolio/
