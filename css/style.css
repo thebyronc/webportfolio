@@ -23,10 +23,10 @@ h2 {
   font-size: 50px;
 }
 .navbar {
-  position: fixed;
-  z-index: 1;
+  /* position: fixed; */
+  /* z-index: 1; */
+  /* top: 0px; */
   width: 100%;
-  top: 0px;
   border-radius: 0px;
 }
 .navbar-default {
