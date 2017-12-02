@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Byron Chang - Portfolio</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/scripts.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -18,7 +20,7 @@
           <li role="presentation"><a href="#aboutbyron">About Me</a></li>
           <li role="presentation"><a href="#github">GitHub</a></li>
           <li role="presentation"><a href="#wiki">Wiki Exercise</a></li>
-          <li role="presentation"><a href="#favband">Favorite Band Exercise</a></li>
+          <li role="presentation"><a href="#trackSuggestor">Track Suggestor Project</a></li>
           <li role="presentation"><a href="#workhistory">Work History</a></li>
           <li role="presentation"><a href="#contact">Contact</a></li>
         </ul>
@@ -32,7 +34,7 @@
 
       <div class="contentbox" id="aboutbyron">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3" class="sidepreview">
             <img src="img/bc_square.png" alt="Image of Byron Chang">
           </div>
           <div class="col-md-9">
@@ -58,7 +60,7 @@
               <li>Favband repository: <a href="https://github.com/thebyronc/favband" target="_blank">https://github.com/thebyronc/favband</a></li>
             </ul>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" class="sidepreview">
             <img src="img/github-logo.png" alt="GitHub logo">
           </div>
         </div>
@@ -66,7 +68,7 @@
 
       <div class="contentbox" id="wiki">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-4" class="sidepreview">
             <img src="img/wiki.png" alt="Image of our Wiki site">
           </div>
           <div class="col-md-8">
@@ -83,19 +85,193 @@
         </div>
       </div><!-- end wiki -->
 
-      <div class="contentbox" id="favband">
-        <div class="row">
-          <div class="col-md-8">
-            <h2>FAVORITE BAND EXERCISE</h2>
-            <p>This band page was an excercise in using floats to create provide additional options for content layout.</p>
-            <p>As my partner and I were creating this we found the overall concept pretty simple. This turned out to be an example of not knowing what you don't know.</p>
-            <p>Although this particular exercise did not give us any trouble, we were not fully able to understand the intricate workings the float property. This proved to be a problem in the subsequent project we had to work on.</p>
-          </div>
+      <div class="contentbox" id="trackSuggestor">
+        <h2 id="coursetracker">TRACK SUGGESTOR</h2>
+        <div class="row" id="formandresult">
+          <div class="col-md-8 pinkborder">
+            <p>This questionaire will help determine what course you should take at Epicodus.</p>
+            <form id="trackQuestions">
+              <div class="form-group">
+                <label for="name">Please enter your name:</label>
+                <input id="name" class="form-control" type="text" required>
+              </div>
+              <div class="form-group">
+                <table class="table table-hover questions">
+                  <thead>
+                    <tr>
+                      <th>Questions:</th>
+                      <th>Strongly Disagree</th>
+                      <th>Disagree</th>
+                      <th>Neutral</th>
+                      <th>Agree</th>
+                      <th>Strongly Agree</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>When consuming media, you prefer to use your mobile device:</th>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question1" value="1">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question1" value="2">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question1" value="3" checked>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question1" value="4">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question1" value="5">
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>When interacting with digital content, you prefer to use a mouse and keyboard:</th>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question2" value="5">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question2" value="4">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question2" value="3" checked>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question2" value="2">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question2" value="1">
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>You've spent more money on a computer than you have on mobile devices:</th>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question3" value="1">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question3" value="2">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question3" value="3" checked>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question3" value="4">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question3" value="5">
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>During Black Friday, you are most excited about the discounts for cell phones:</th>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question4" value="5">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question4" value="4">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question4" value="3" checked>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question4" value="2">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question4" value="1">
+                        </label>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>You absulotely love the idea of never having to deal with front end or design work:</th>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question5" value="1">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question5" value="2">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question5" value="3" checked>
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question5" value="4">
+                        </label>
+                      </td>
+                      <td>
+                        <label class="radio-inline">
+                          <input type="radio" name="question5" value="5">
+                        </label>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button type="submit" class="btn btn-custred">Submit</button>
+            </form>
+          </div><!-- end col-md-6 -->
           <div class="col-md-4">
-            <img src="img/favband.png" alt="Image of our website Favorite Band">
-          </div>
-        </div>
-      </div><!-- end favband -->
+            <div class="results">
+              <h4>Your personal recommendation: <span id="couresrec"></span></h5>
+              <p id="output"></p>
+            </div>
+            <div class="courses">
+              <h4>Languages and Technologies offered at Epicodus:</h5>
+              <a href="https://www.learnhowtoprogram.com/intro-to-programming" target="_blank" class="intro"><img src="img/intro.png" alt="Intro" class="cssdesign grayscale"></a>
+              <a href="https://www.learnhowtoprogram.com/css" target="_blank" class="cssdesign"><img src="img/css.png" alt="CSS Badge" class="grayscale"></a>
+              <a href="https://www.learnhowtoprogram.com/css" target="_blank" class="cssdesign"><img src="img/html.png" alt="HTML Badge" class="grayscale"></a>
+              <a href="https://www.learnhowtoprogram.com/java" target="_blank" class="javaandroid"><img src="img/android.png" alt="Android Robot" class="grayscale"></a>
+              <a href="https://www.learnhowtoprogram.com/android" target="_blank" class="javaandroid"><img src="img/java.png" alt="Java Logo" class="grayscale"></a>
+              <a href="https://www.learnhowtoprogram.com/php" target="_blank" class="phpdrupal">  <img src="img/php.png" alt="PHP Logo" class="grayscale"></a>
+              <a href="https://www.learnhowtoprogram.com/drupal" target="_blank" class="phpdrupal"><img src="img/drupal.png" alt="Drupal Logo" class="grayscale"></a>
+            </div>
+          </div><!-- end col-md-6 -->
+        </div><!-- end row -->
+      </div><!-- end trackSuggstor -->
 
       <div class="contentbox" id="workhistory">
         <div class="row">
@@ -117,7 +293,7 @@
               <li>BS Arts - 2004 to 2009</li>
             </ul>
           </div>
-          <div class="col-md-6" id="contact">
+          <div class="col-md-6" id="contact" class="sidepreview">
             <h2>CONTACT</h2>
             <img src="img/bc_g.png" alt="Picture of Byron Chang with gray hair.">
             <h4>Byron Chang</h4>
