@@ -5,8 +5,10 @@
     <title>Byron Chang - Portfolio</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <link href="css/beepboop_styles.css" type="text/css" rel="stylesheet">
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/beepboop_scripts.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -19,7 +21,7 @@
         <ul class="nav nav-pills">
           <li role="presentation"><a href="#aboutbyron">About Me</a></li>
           <li role="presentation"><a href="#github">GitHub</a></li>
-          <li role="presentation"><a href="#wiki">Wiki Exercise</a></li>
+          <li role="presentation"><a href="#beepboopbox">Beep Boop!</a></li>
           <li role="presentation"><a href="#trackSuggestor">Track Suggestor Project</a></li>
           <li role="presentation"><a href="#workhistory">Work History</a></li>
           <li role="presentation"><a href="#contact">Contact</a></li>
@@ -66,23 +68,46 @@
         </div>
       </div><!-- end github -->
 
-      <div class="contentbox" id="wiki">
-        <div class="row">
-          <div class="col-md-4" class="sidepreview">
-            <img src="img/wiki.png" alt="Image of our Wiki site">
-          </div>
+      <div class="contentbox" id="beepboopbox">
+        <div class="row" id="beepboop">
+          <h2>BEEP BOOP!</h2>
+          <div class="col-md-4">
+            <form id="formBeepBoop">
+              <h4>DATA IN:</h4>
+              <div class="form-group">
+                <label for="inputName">What is your name? </label>
+                <input id="inputName" class="form-control" type="text">
+              </div>
+              <div class="form-group">
+                <label for="inputNumber">*Enter a number: </label>
+                <input id="inputNumber" class="form-control" type="number" required>
+              </div>
+              <button type="submit" class="btn btn-teal">Submit</button>
+              <button type="reset" id="wipe" class="btn btn-default">Wipe Memory</button>
+            </form>
+          </div><!-- end col -->
           <div class="col-md-8">
-            <h2>WIKI PAGE IMITATION</h2>
-            <p>This wiki page was an excercise in imitating another websites looks and not the functionality.</p>
-            <p>My partner and I went in thinking this should take too long, but when we got into the details we struggled with the floats and side menu. We were able to solve the issue by using the <em>"position: absolute;"</em> in the css</p>
-            <h4>Wiki page development difficulties:</h4>
-            <ol>
-              <li>Converting covernting wiki content to look the same in our project. The difference in framework created a lot of detailed and manual overrides to get it to looks similar.</li>
-              <li>The Wiki had a 6x4 table to create a layout that links to different sites. Re-creating that table took about an hour.</li>
-              <li>Sheer number of different text layout that we had to mimic was not difficult, but was time consuming.</li>
-            </ol>
-          </div>
-        </div>
+
+            <div class="row borderleft">
+              <div class="col-md-8">
+                <h4>DATA OUT:</h4>
+                <textarea id="beepBoopOutput" rows="12" cols="50" readonly>
+                </textarea>
+              </div>
+              <div class="col-md-4">
+                <table id="bottable">
+                  <tr>
+                    <td class="botdata"><p id="bot_left"></p></td>
+                    <td class="botdata"><p id="bot_right"></p></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"><img src="img/bot_n.png" id="friendlybot"></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div><!-- end col -->
+        </div><!-- end row -->
       </div><!-- end wiki -->
 
       <div class="contentbox" id="trackSuggestor">
